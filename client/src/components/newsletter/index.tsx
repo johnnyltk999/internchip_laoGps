@@ -1,28 +1,28 @@
-import axios from "axios";
+// import axios from "axios";
 import { useState } from "react";
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
 
-  const resetEmail = () => {
-    setEmail("");
-  };
+  // const resetEmail = () => {
+  //   setEmail("");
+  // };
 
-  const addCustomerEmail = () => {
-    axios
-      .post("http://localhost:3001/create", {
-        email: email,
-      })
-      .then((response) => {
-        console.log("Customer email added:", response.data);
-        alert("Email added successfully!");
-        resetEmail();
-      })
-      .catch((error) => {
-        console.error("Error adding customer email:", error);
-        alert("An error occurred while adding the Email.");
-      });
-  };
+  // const addCustomerEmail = () => {
+  //   axios
+  //     .post("http://localhost:3001/create", {
+  //       email: email,
+  //     })
+  //     .then((response) => {
+  //       console.log("Customer email added:", response.data);
+  //       alert("Email added successfully!");
+  //       resetEmail();
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error adding customer email:", error);
+  //       alert("An error occurred while adding the Email.");
+  //     });
+  // };
 
   return (
     <div className="w-full py-16 text-black px-4">
@@ -44,13 +44,13 @@ const Newsletter = () => {
             />
             <button
               className="bg-[#1178bb] text-white rounded-md font-medium w-[200px] ml-4 my-6 px-6 py-3 hover:bg-sky-700"
-              onClick={() => {
-                if (email.trim() !== "") {
-                  addCustomerEmail();
-                } else {
-                  alert("Please enter a valid email.");
-                }
-              }}
+              // onClick={() => {
+              //   if (email.trim() !== "") {
+              //     addCustomerEmail();
+              //   } else {
+              //     alert("Please enter a valid email.");
+              //   }
+              // }}
             >
               Notify Me
             </button>
